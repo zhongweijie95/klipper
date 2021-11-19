@@ -11,21 +11,23 @@ an issue or for details on contacting the developers.
 
 Contributions to Klipper generally follow a high-level process:
 
-1. Consider starting a new topic on [Klipper Discourse](Contact.md) or
-   update an existing topic there.  An ongoing discussion on the forum
-   can improve visibility to development work and may attract others
-   interested in testing your work.
-2. When your code is ready for merging into the Klipper master branch
-   and a [reviewer](#reviewers) indicates they are available to review
-   your contribution, then create a
+1. When code is ready for widespread deployment, a submitter will
+   create a
    [GitHub Pull Request](https://github.com/Klipper3d/klipper/pulls)
    with the change.
-3. The [reviewer](#reviewers) will then perform a
-   [review](#what-to-expect-in-a-review) of the submission to look for
-   defects and to check that the submission follows documented
-   guidelines.
-4. After a successful review, a [maintainer](#reviewers) will commit
+2. When a [reviewer](#reviewers) is available to
+   [review](#what-to-expect-in-a-review) the submission, they will
+   mark the Pull Request with a "under review" label. The goal of the
+   review is to look for defects and to check that the submission
+   follows documented guidelines.
+3. After a successful review, the reviewer will mark the Pull Request
+   with a "reviewed" label and a [maintainer](#reviewers) will commit
    the change to the Klipper master branch.
+
+When working on enhancements, consider starting (or contributing to) a
+topic on [Klipper Discourse](Contact.md). An ongoing discussion on the
+forum can improve visibility of development work and may attract
+others interested in testing new work.
 
 ## What to expect in a review
 
@@ -53,11 +55,12 @@ Common things a reviewer will look for:
    of printers within a few weeks of acceptance. Quality of
    submissions is therefore considered a priority.
 
-   The Klipper master branch does not accept experimental work.
-   Submitters should perform experimentation, debugging, and testing
-   in their own repositories. The [Klipper Discourse](Contact.md)
-   server is a good place to raise awareness of new work and to find
-   users interested in providing real-world feedback.
+   The main [Klipper3d/klipper](https://github.com/Klipper3d/klipper)
+   GitHub repository does not accept experimental work. Submitters
+   should perform experimentation, debugging, and testing in their own
+   repositories. The [Klipper Discourse](Contact.md) server is a good
+   place to raise awareness of new work and to find users interested
+   in providing real-world feedback.
 
    Submissions must pass all [regression test cases](Debugging.md).
 
@@ -122,6 +125,13 @@ Common things a reviewer will look for:
 
    Commit messages should follow the
    [preferred format](#format-of-commit-messages).
+
+   Commits must not have a merge conflict. New additions to the
+   Klipper master branch are always done via a "rebase" or "squash and
+   rebase". It is generally not necessary for submitters to re-merge
+   their submission on every update to the Klipper master repository.
+   However, if there is a merge conflict, then submitters are
+   recommended to use `git rebase` to address the conflict.
 
    Each commit should address a single high-level change. Large
    changes should be broken up into multiple independent commits. Each
@@ -215,9 +225,10 @@ The Klipper "reviewers" are:
 
 | Name                   | GitHub name       | Areas of interest |
 | ---------------------- | ----------------- | ----------------- |
-| Eric Callahan          | @Arksine          | Bed leveling, MCU flashing |
 | Dmitry Butyugin        | @dmbutyugin       | Input shaping, resonance testing, kinematics |
+| Eric Callahan          | @Arksine          | Bed leveling, MCU flashing |
 | Kevin O'Connor         | @KevinOConnor     | Core motion system, Micro-controller code |
+| Paul McGowen           | @mental405        | Configuration files, documentation |
 
 Please do not "ping" any of the reviewers and please do not direct
 submissions at them. All of the reviewers monitor the forums and PRs,
