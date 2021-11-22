@@ -223,7 +223,7 @@ submission.
 
 The Klipper "reviewers" are:
 
-| Name                   | GitHub name       | Areas of interest |
+| Name                   | GitHub Id         | Areas of interest |
 | ---------------------- | ----------------- | ----------------- |
 | Dmitry Butyugin        | @dmbutyugin       | Input shaping, resonance testing, kinematics |
 | Eric Callahan          | @Arksine          | Bed leveling, MCU flashing |
