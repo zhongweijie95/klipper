@@ -11,10 +11,9 @@ an issue or for details on contacting the developers.
 
 Contributions to Klipper generally follow a high-level process:
 
-1. When code is ready for widespread deployment, a submitter will
-   create a
+1. A submitter starts by creating a
    [GitHub Pull Request](https://github.com/Klipper3d/klipper/pulls)
-   with the change.
+   when a submission is ready for widespread deployment.
 2. When a [reviewer](#reviewers) is available to
    [review](#what-to-expect-in-a-review) the submission, they will
    mark the Pull Request with a "under review" label. The goal of the
@@ -49,8 +48,8 @@ Common things a reviewer will look for:
 1. Is the submission free of defects and is it ready to be widely
    deployed?
 
-   Submitters are expected to test their code prior to submission. The
-   reviewers look for errors, but they don't, in general, test
+   Submitters are expected to test their changes prior to submission.
+   The reviewers look for errors, but they don't, in general, test
    submissions. An accepted submission is often deployed to thousands
    of printers within a few weeks of acceptance. Quality of
    submissions is therefore considered a priority.
